@@ -1,6 +1,6 @@
 document.getElementById('click').onclick = function() 
 {
-    let password = document.getElementById('password').ariaValueMax;
+    let password = document.getElementById('password').value;
     let outputMessages = ""
     let specialCharacters = ['!', '@', '#', '$', '%', '^', '&', '*']
     
@@ -19,7 +19,6 @@ document.getElementById('click').onclick = function()
     if (!specialCharacters.some(char => password.includes(char))) {
         outputMessages += "The password must contain at least one special character (!, @, #, $).\n";
     }
-    document.getElementById('result').innerHTML = outputMessages;
-
     
+    document.getElementById('result').innerHTML = outputMessages;
 }
