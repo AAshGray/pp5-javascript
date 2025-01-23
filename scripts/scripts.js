@@ -29,14 +29,16 @@ document.getElementById('click').onclick = function() {
     }
 
     if (password === password.toLowerCase()) {
-        outputMessages += "The password must have at least one capital letter.";
+        outputMessages += "The password must have at least one capital letter.<br>";
         counter++;
     }
 
     if (password === password.toUpperCase()) {
-        outputMessages += "The password must have at least one lowercase letter.";
+        outputMessages += "The password must have at least one lowercase letter.<br>";
         counter++;
     }
+
+
 
     // Needs to be the last thing in the file
     if (counter > 0) {
