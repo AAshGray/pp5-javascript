@@ -1,5 +1,4 @@
-document.getElementById('click').onclick = function() 
-{
+document.getElementById('click').onclick = function() {
     let password = document.getElementById('password').value;
     let outputMessages = ""
     let specialCharacters = ['!', '@', '#', '$', '%', '^', '&', '*']
