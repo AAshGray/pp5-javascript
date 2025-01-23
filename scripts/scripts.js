@@ -25,6 +25,17 @@ document.getElementById('click').onclick = function() {
 
     if (password.includes(" ")) {
         outputMessages += "The password must not contain spaces.<br>";
+        counter++;
+    }
+
+    if (password === password.toLowerCase()) {
+        outputMessages += "The password must have at least one capital letter.";
+        counter++;
+    }
+
+    if (password === password.toUpperCase()) {
+        outputMessages += "The password must have at least one lowercase letter.";
+        counter++;
     }
 
     // Needs to be the last thing in the file
