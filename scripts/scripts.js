@@ -16,6 +16,11 @@ document.getElementById('click').onclick = function()
         outputMessages += "The password must be at least 8 characters long.";
     }
 
+    if (!specialCharacters.some(char => password.includes(char))) {
+        outputMessages += "The password must contain at least one special character (!, @, #, $).\n";
+    }
+    document.getElementById('result').innerHTML = outputMessages;
+
     
 
     
