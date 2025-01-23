@@ -26,5 +26,8 @@ document.getElementById('click').onclick = function() {
     if (counter > 0) {
         document.getElementById('result').innerHTML = outputMessages;
     }
+    if (password.includes(" ")) {
+        outputMessages += "The password must not contain spaces.\n";
+    }
     
 }
