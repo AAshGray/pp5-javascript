@@ -1,4 +1,7 @@
-
+    h1 {
+        color: green;
+    }
+    
     .result {
         color: red;
         font-weight: bold;
@@ -16,5 +19,5 @@
         margin-top: 0.5em;
     }
     body {
-        background-color: gray;
+        background-color: lightgray;
     }    
