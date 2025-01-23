@@ -47,9 +47,6 @@ document.getElementById('click').onclick = function() {
         counter++;
     }
 
-    if (password)
-
-
     // Needs to be the last thing in the file
     if (counter > 0) {
         document.getElementById('result').innerHTML = outputMessages;
