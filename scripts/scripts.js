@@ -50,6 +50,10 @@ document.getElementById('click').onclick = function() {
     // Needs to be the last thing in the file
     if (counter > 0) {
         document.getElementById('result').innerHTML = outputMessages;
+        document.getElementById('result').style.color = "red";
+    } else {
+        document.getElementById('result').innerHTML = "Password is valid!";
+        document.getElementById('result').style.color = "green";
     }
     
 }
