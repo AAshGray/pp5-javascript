@@ -2,6 +2,7 @@ document.getElementById('click').onclick = function() {
     let password = document.getElementById('password').value;
     let outputMessages = "Password is invalid:<br>"
     let specialCharacters = ['!', '@', '#', '$', '%', '^', '&', '*']
+    let numbers = [1,2,3,4,5,6,7,8,9,0]
     
     // Password Requirements
     // Minimum length: 8
@@ -13,13 +14,21 @@ document.getElementById('click').onclick = function() {
 
     let counter = 0;
 
+    // reset the innerHTML on each click
+    document.getElementById('result').innerHTML = "";
+
     if (password.length < 8) {
         outputMessages += "The password must be at least 8 characters long.<br>";
         counter++;
     }
 
     if (!specialCharacters.some(char => password.includes(char))) {
-        outputMessages += "The password must contain at least one special character (!, @, #, $).<br>";
+        outputMessages += "The password must contain at least one special character (!, @, #, $, %, ^, &, *).<br>";
+        counter++;
+    }
+
+    if (!numbers.some(number => password.includes(number))) {
+        outputMessages += "The password must contain at least one digit.<br>";
         counter++;
     }
 
@@ -38,6 +47,7 @@ document.getElementById('click').onclick = function() {
         counter++;
     }
 
+    if (password)
 
 
     // Needs to be the last thing in the file
